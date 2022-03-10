@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Sansita+Swashed&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+	background-color: black;
+    box-sizing: border-box;
+    background: #68ddf8;
+    overflow: hidden;
+}
+#container{
+	width: 1000px;
+	height: 550px;
+	margin: 20px auto;    	
+}
+.bubbles{
+    position: absolute;
+    bottom: -100px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.bubbles span{
+    height: 60px;
+    width: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    animation: move 10s linear infinite;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes move{
+    100%{
+           transform: translateY(-90vh);  
+    }
+}
+ .bubbles span.um{
+    animation-delay: 2.2s;
+    transform: scale(1.15)
+} 
+ .bubbles span.dois{
+    animation-delay: 3.5s;
+    transform: scale(1.55)
+}
+.bubbles span.tres{
+    animation-delay: 0.2s;
+    transform: scale(0.35)
+}
+.bubbles span.quatro{
+    animation-delay: 6s;
+    transform: scale(2.15)
+}
+.bubbles span.cinco{
+    animation-delay: 7s;
+    transform: scale(0.5)
+}
+.bubbles span.seis{
+    animation-delay: 4s;
+    transform: scale(2.5)
+}
+.bubbles span.sete{
+    animation-delay: 3s; 
+    transform: scale(1.5)
+} 
+.bubbles span:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 40%;
+    transform: skew(45deg) translateX(150px);
+    background: rgba(255, 255, 255, 0.15);
+    animation: mirror 3s linear infinite;
+}
+@keyframes mirror{
+    100%{
+        transform: translateX(-450px);
+    }
+}
+.bubbles span.um:before{
+    animation-delay: 1.5s;
+}
+.bubbles span.dois:before{
+    animation-delay: 3.5s;
+}
+.bubbles span.tres:before{
+    animation-delay: 2.5s;
+}
+.bubbles span.quatro:before{
+    animation-delay: 7.5s;
+}
+.bubbles span.cinco:before{
+    animation-delay: 4.5s;
+}
+.bubbles span.seis:before{
+    animation-delay: 0.5s;
+}
+.bubbles span.sete:before{
+    animation-delay: 6s;
+}
+#calculator{
+	width: 320px;
+	height: 520px;
+	background-color: transparent;
+	margin: 0 auto;
+	top: 20px;
+	position: relative;
+    backdrop-filter: blur(5px);
+	border-radius: 12px;
+	box-shadow: 0 20px 50px rgba(255, 255, 255, 0.15);
+}
+#result{
+	height: 120px;
+}
+#history{
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 15px;
+	color: black;
+}
+#output{
+	text-align: right;
+	height: 60px;
+	margin: 10px 20px;
+	font-size: 30px;
+}
+#keyboard{
+	height: 400px;
+}
+.operator, .number, .empty{
+	width: 50px;
+	height: 50px;
+	margin: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+	float: left;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 15px;
+}
+.number, .empty{
+    background: transparent;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+.number:hover{
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.number, .operator{
+	cursor: pointer;
+}
+.operator:active, .number:active{
+	font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+	outline: 0;
+}
+button:nth-child(4){
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+button:nth-child(8){
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+button:nth-child(12){
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+button:nth-child(16){
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+button:nth-child(20){
+	font-size: 20px;
+	background-color:rgba(255, 255, 255, 0.1);
+}
