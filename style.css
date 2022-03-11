@@ -8,7 +8,7 @@
 body{
 	background-color: black;
     box-sizing: border-box;
-    background: #68ddf8;
+    background: linear-gradient(#c88fff,#4e2ff7);
     overflow: hidden;
 }
 #container{
